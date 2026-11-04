@@ -78,32 +78,32 @@ export const PARKING_INDEX = 20
 
 export const CHANCE_CARDS = [
   { text: 'Traffic jam at Panchvati circle. Lose a turn sipping chai.', effect: { kind: 'skip' } },
-  { text: 'Uttarayan! Your kite cut three. Everyone pays you 10,000.', effect: { kind: 'collectAll', amount: 10 * K } },
-  { text: 'Navratri pass resale went well. Collect 50,000.', effect: { kind: 'cash', amount: 50 * K } },
+  { text: 'Uttarayan! Your kite cut three. Everyone pays you ₹10,000.', effect: { kind: 'collectAll', amount: 10 * K } },
+  { text: 'Navratri pass resale went well. Collect ₹50,000.', effect: { kind: 'cash', amount: 50 * K } },
   { text: 'Advance to Manek Chowk for jalebi-fafda. Pay if owned.', effect: { kind: 'moveTo', index: 39 } },
-  { text: 'BRTS lane fine. Pay 25,000.', effect: { kind: 'cash', amount: -25 * K } },
+  { text: 'BRTS lane fine. Pay ₹25,000.', effect: { kind: 'cash', amount: -25 * K } },
   { text: 'Take the metro to Kalupur Junction.', effect: { kind: 'moveTo', index: 5 } },
-  { text: 'Riverfront marathon winner. Collect 30,000.', effect: { kind: 'cash', amount: 30 * K } },
+  { text: 'Riverfront marathon winner. Collect ₹30,000.', effect: { kind: 'cash', amount: 30 * K } },
   { text: 'Caught without a helmet on Ashram Road. Chowki jao!', effect: { kind: 'jail' } },
   { text: 'Back three steps, you forgot your wallet at the pol.', effect: { kind: 'move', steps: -3 } },
   { text: 'Lawyer friend fixed your challan. Keep this Chowki-mafi card.', effect: { kind: 'jailCard' } },
-  { text: 'Repairs across your properties: 10,000 per house.', effect: { kind: 'repairs', perHouse: 10 * K } },
+  { text: 'Repairs across your properties: ₹10,000 per house.', effect: { kind: 'repairs', perHouse: 10 * K } },
   { text: 'Go to START and collect the pagaar.', effect: { kind: 'moveTo', index: 0 } },
 ]
 
 export const CHEST_CARDS = [
-  { text: 'Society maintenance refund. Collect 20,000.', effect: { kind: 'cash', amount: 20 * K } },
-  { text: 'Wedding season catering order. Collect 75,000.', effect: { kind: 'cash', amount: 75 * K } },
-  { text: 'Garba class fees due. Pay 15,000.', effect: { kind: 'cash', amount: -15 * K } },
-  { text: 'Doctor at Civil Hospital. Pay 40,000.', effect: { kind: 'cash', amount: -40 * K } },
-  { text: 'Won the Mandli lottery. Collect 100,000.', effect: { kind: 'cash', amount: 100 * K } },
+  { text: 'Society maintenance refund. Collect ₹20,000.', effect: { kind: 'cash', amount: 20 * K } },
+  { text: 'Wedding season catering order. Collect ₹75,000.', effect: { kind: 'cash', amount: 75 * K } },
+  { text: 'Garba class fees due. Pay ₹15,000.', effect: { kind: 'cash', amount: -15 * K } },
+  { text: 'Doctor at Civil Hospital. Pay ₹40,000.', effect: { kind: 'cash', amount: -40 * K } },
+  { text: 'Won the Mandli lottery. Collect ₹1,00,000.', effect: { kind: 'cash', amount: 100 * K } },
   { text: 'Chowki-mafi card! Keep it till you need it.', effect: { kind: 'jailCard' } },
-  { text: 'School fees for the whole pol. Pay each player 15,000.', effect: { kind: 'payAll', amount: 15 * K } },
-  { text: 'Old scooter sold in Gulbai Tekra. Collect 45,000.', effect: { kind: 'cash', amount: 45 * K } },
-  { text: 'Income tax notice. Pay 50,000.', effect: { kind: 'cash', amount: -50 * K } },
-  { text: 'Cousin repaid an old loan. Collect 60,000.', effect: { kind: 'cash', amount: 60 * K } },
-  { text: 'Unpaid electricity bill at Torrent. Pay 30,000.', effect: { kind: 'cash', amount: -30 * K } },
-  { text: 'Street-food stall profit share. Collect 35,000.', effect: { kind: 'cash', amount: 35 * K } },
+  { text: 'School fees for the whole pol. Pay each player ₹15,000.', effect: { kind: 'payAll', amount: 15 * K } },
+  { text: 'Old scooter sold in Gulbai Tekra. Collect ₹45,000.', effect: { kind: 'cash', amount: 45 * K } },
+  { text: 'Income tax notice. Pay ₹50,000.', effect: { kind: 'cash', amount: -50 * K } },
+  { text: 'Cousin repaid an old loan. Collect ₹60,000.', effect: { kind: 'cash', amount: 60 * K } },
+  { text: 'Unpaid electricity bill at Torrent. Pay ₹30,000.', effect: { kind: 'cash', amount: -30 * K } },
+  { text: 'Street-food stall profit share. Collect ₹35,000.', effect: { kind: 'cash', amount: 35 * K } },
 ]
 
 // Grid coordinates (1-indexed, 11x11) for every tile so tokens and tiles agree.

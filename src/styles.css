@@ -33,9 +33,10 @@ body {
   font-family: Inter, system-ui, sans-serif;
   color: var(--text);
   background:
-    radial-gradient(1100px 700px at 8% -10%, rgba(255, 122, 24, .35), transparent 60%),
-    radial-gradient(900px 620px at 100% 0%, rgba(226, 51, 140, .32), transparent 60%),
-    radial-gradient(900px 700px at 50% 120%, rgba(15, 155, 142, .3), transparent 60%),
+    radial-gradient(1100px 700px at 8% -10%, rgba(255, 122, 24, .55), transparent 62%),
+    radial-gradient(900px 620px at 100% 0%, rgba(226, 51, 140, .5), transparent 62%),
+    radial-gradient(1000px 760px at 50% 118%, rgba(15, 155, 142, .45), transparent 62%),
+    radial-gradient(700px 500px at 85% 95%, rgba(75, 59, 209, .4), transparent 60%),
     linear-gradient(160deg, #1b0d2a, #0d0716 60%, #15091f);
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
@@ -170,13 +171,16 @@ button { font-family: inherit; cursor: pointer; }
 
 .tile-icon { font-size: clamp(11px, 1.4vw, 19px); line-height: 1; }
 .tile-name {
-  font-size: clamp(5.5px, .72vw, 9.6px);
+  font-size: clamp(6px, .78vw, 10.2px);
   font-weight: 700;
-  line-height: 1.12;
-  letter-spacing: .01em;
-  text-transform: uppercase;
+  line-height: 1.14;
+  letter-spacing: -.005em;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+  max-width: 100%;
 }
-.tile.corner .tile-name { font-size: clamp(6px, .78vw, 10.5px); color: #7a3c00; }
+.side-left .tile-name, .side-right .tile-name { font-size: clamp(5.4px, .68vw, 9px); }
+.tile.corner .tile-name { font-size: clamp(6px, .76vw, 10px); color: #7a3c00; text-transform: uppercase; letter-spacing: .04em; }
 .tile-price {
   font-size: clamp(5px, .62vw, 8.4px);
   font-weight: 600;
@@ -203,7 +207,7 @@ button { font-family: inherit; cursor: pointer; }
   display: grid; place-items: center;
   border-radius: 14px;
   background:
-    radial-gradient(circle at 50% 50%, rgba(255, 179, 0, .16), transparent 62%),
+    radial-gradient(circle at 50% 50%, rgba(255, 179, 0, .3), transparent 64%),
     conic-gradient(from 0deg, rgba(226, 51, 140, .22), rgba(15, 155, 142, .22), rgba(255, 122, 24, .22), rgba(75, 59, 209, .22), rgba(226, 51, 140, .22));
   border: 1px solid rgba(255, 179, 0, .22);
 }

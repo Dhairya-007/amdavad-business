@@ -21,7 +21,7 @@ export default function App() {
   useEffect(() => {
     if (!game) return
     if (game.phase === 'walk') {
-      const t = setTimeout(() => dispatch({ type: 'STEP' }), 150)
+      const t = setTimeout(() => dispatch({ type: 'STEP' }), 125)
       return () => clearTimeout(t)
     }
     if (game.phase === 'resolve') {
