@@ -265,6 +265,8 @@ function nextTurn(s) {
 }
 
 export function reducer(state, action) {
+  if (action.type === 'INIT') return action.state
+  if (!state) return state
   const s = structuredClone(state)
   const player = s.players[s.turn]
 
