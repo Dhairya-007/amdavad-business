@@ -8,6 +8,8 @@ Frontend only. React + Vite, no backend, no API keys, no install beyond `npm i`.
 
 ![stack](https://img.shields.io/badge/React-18-61dafb) ![stack](https://img.shields.io/badge/Vite-5-646cff) ![stack](https://img.shields.io/badge/backend-none-brightgreen)
 
+![Amdavad Business — mid-game, with the rent card open for Law Garden](docs/gameplay.png)
+
 ## Play
 
 ```bash
@@ -59,6 +61,10 @@ games were run end to end to catch dead-ends before any of this was styled.
 | Houses | own the full colour set, build evenly, 4 houses then a hotel |
 | Mortgage | half the price, no rent until cleared (55% to clear) |
 | Winning | last seth standing |
+
+## Screens
+
+<img src="docs/setup.png" width="520" alt="Picking the sethiya before the first roll" />
 
 ## License
 
