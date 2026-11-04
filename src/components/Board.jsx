@@ -85,15 +85,16 @@ export default function Board({ state, onSelect, selected }) {
           const peers = stacks[p.pos] || []
           const slot = peers.findIndex((q) => q.id === p.id)
           const n = Math.max(1, peers.length)
-          const dx = (slot - (n - 1) / 2) * 42
+          const dx = (slot - (n - 1) / 2) * 11
           const c = PLAYER_COLORS[p.color]
           return (
             <span
               key={p.id}
               className={'token' + (state.turn === p.id ? ' token-turn' : '')}
               style={{
-                left: `calc(${(col - 0.5) * (100 / 11)}% + ${dx}%)`,
+                left: `${(col - 0.5) * (100 / 11)}%`,
                 top: `${(row - 0.5) * (100 / 11)}%`,
+                transform: `translate(calc(-50% + ${dx}px), -50%)`,
                 background: `radial-gradient(circle at 32% 28%, #fff6, transparent 60%), linear-gradient(160deg, ${c.hex}, ${c.deep})`,
               }}
               title={p.name}
