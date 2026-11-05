@@ -1,21 +1,6 @@
 import { BOARD, PLAYER_COLORS, JAIL_FINE } from '../data/board.js'
 import { money, netWorth, owned } from '../game/engine.js'
-
-const PIPS = {
-  1: [4], 2: [0, 8], 3: [0, 4, 8], 4: [0, 2, 6, 8],
-  5: [0, 2, 4, 6, 8], 6: [0, 2, 3, 5, 6, 8],
-}
-
-export function Die({ value, rolling }) {
-  const on = PIPS[value] || []
-  return (
-    <div className={'die' + (rolling ? ' die-rolling' : '')}>
-      {Array.from({ length: 9 }).map((_, i) => (
-        <span key={i} className={on.includes(i) ? 'pip on' : 'pip'} />
-      ))}
-    </div>
-  )
-}
+import Dice3D from './Dice3D.jsx'
 
 function PlayerCard({ state, p, isTurn }) {
   const c = PLAYER_COLORS[p.color]
@@ -71,8 +56,7 @@ export default function Panel({ state, dispatch, onBuyPrompt }) {
         </div>
 
         <div className="dice-row">
-          <Die value={state.dice ? state.dice[0] : 1} rolling={rolling} />
-          <Die value={state.dice ? state.dice[1] : 1} rolling={rolling} />
+          <Dice3D values={state.dice || [1, 1]} rolling={rolling} size={92} />
           <span className="dice-total">
             {state.dice ? state.dice[0] + state.dice[1] : '—'}
           </span>

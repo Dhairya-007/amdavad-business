@@ -1,3 +1,4 @@
+import { useCallback, useRef } from 'react'
 import { BOARD, GROUPS, cellOf, sideOf, PLAYER_COLORS } from '../data/board.js'
 import { money } from '../game/engine.js'
 
@@ -54,8 +55,30 @@ export default function Board({ state, onSelect, selected }) {
     stacks[p.pos].push(p)
   })
 
+  const wrapRef = useRef(null)
+  const frame = useRef(null)
+
+  const onMove = useCallback((e) => {
+    const el = wrapRef.current
+    if (!el) return
+    const rect = el.getBoundingClientRect()
+    const px = (e.clientX - rect.left) / rect.width - 0.5
+    const py = (e.clientY - rect.top) / rect.height - 0.5
+    if (frame.current) cancelAnimationFrame(frame.current)
+    frame.current = requestAnimationFrame(() => {
+      const board = el.querySelector('.board')
+      if (board) board.style.transform = `rotateX(${(-py * 6).toFixed(2)}deg) rotateY(${(px * 6).toFixed(2)}deg)`
+    })
+  }, [])
+
+  const onLeave = useCallback(() => {
+    const el = wrapRef.current
+    const board = el && el.querySelector('.board')
+    if (board) board.style.transform = 'rotateX(0deg) rotateY(0deg)'
+  }, [])
+
   return (
-    <div className="board-wrap">
+    <div className="board-wrap" ref={wrapRef} onMouseMove={onMove} onMouseLeave={onLeave}>
       <div className="board">
         {BOARD.map((tile, i) => (
           <Tile
